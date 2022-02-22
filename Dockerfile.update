@@ -1,0 +1,10 @@
+FROM alpine:3.14
+RUN apk update && apk add openjdk8 openjdk8-jre R R-dev R-doc build-base tzdata
+RUN set -ex && apk --no-cache add sudo
+RUN echo "Set disable_coredump false" >> /etc/sudo.conf
+RUN sudo R CMD javareconf JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk/jre && \
+sudo R -e "install.packages(c('rJava', 'RJDBC', 'lubridate', 'RSQLite'), repos = 'http://cran.rstudio.com/')"
+COPY jars jars
+COPY src/read_update_data.R .
+
+CMD ["Rscript", "read_update_data.R"]
