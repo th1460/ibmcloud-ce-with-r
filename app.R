@@ -33,7 +33,7 @@ last_date <- pool %>%
 
 # ui ----------------------------------------------------------------------
 ui <- fluidPage(
-  navbarPage("COVID 19: South America # of Cases"),
+  navbarPage("COVID 19: # of Cases in South America"),
   theme = theme,
   sidebarLayout(
     sidebarPanel(

@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libxt-dev \
     libssl-dev \
     libsasl2-dev \
+    libgdal-dev \
     r-base \
     r-base-dev
 
