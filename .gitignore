@@ -3,4 +3,5 @@
 .RData
 .Ruserdata
 .Renviron
-.sqlite
+.env
+covid19.sqlite

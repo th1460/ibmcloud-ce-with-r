@@ -1,0 +1,1 @@
+plumber::pr_run(plumber::pr('plumber.R'), host = "0.0.0.0", port = 8080)
